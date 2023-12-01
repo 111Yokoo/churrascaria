@@ -6,13 +6,13 @@ use App\Controllers\Index\IndexController;
 $rotas = [
     '/' => 'IndexController@index',
     '/carnes' => 'IndexController@carnes',
-    '/acompanhamentos' => 'IndexController@acompanhamentos',
+    '/adicionais' => 'IndexController@adicionais',
     '/salada' => 'IndexController@salada',
     '/bebidas' => 'IndexController@bebidas',
-    '/doces' => 'IndexController@doces',
+    '/sobremesas' => 'IndexController@sobremesas',
     '/contato' => 'IndexController@contato',
     '/pedido' => 'IndexController@pedido',
-    '/processarFormulario' => 'IndexController@processarFormulario'
+    '/fazerPedido' => 'IndexController@fazerPedido'
 ];
 
 return $rotas;

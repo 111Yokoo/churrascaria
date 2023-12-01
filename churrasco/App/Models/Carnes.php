@@ -2,40 +2,31 @@
 namespace App\Models;
 use App\Controllers\BD\Conexao;
 
-class Usuarios
+class Carnes
 {
-    private $id;
+    private $id_carnes;
     private $nome;
-    private $endereco;
-    private $numero_casa;
-    private $complemento;
-    private $telefone;
-    private $posicao;
+    private $preco;
+    private $tipo;
 
     public function __get($attr)
     {
         return $this->$attr;
     }
-
     public function __set($attr, $value)
     {
         $this->$attr = $value;
     }
-    
-    //Teste
-    public function listar()
+    public function getAll()
     {
-        // Cria uma instância da classe Conexao
         $conexao = new Conexao();
 
-        // Obtém a conexão
         $conn = $conexao->conectar();
 
-        // Prepara e executa a consulta
-        $stmt = $conn->prepare("SELECT * FROM usuarios");
+        $query = 'SELECT id_carnes, nome, preco, tipo FROM carnes';
+        $stmt = $conn->prepare($query);
         $stmt->execute();
 
-        // Retorna os resultados
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 }

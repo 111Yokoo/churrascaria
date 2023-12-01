@@ -6,6 +6,9 @@ Geral*/
 @font-face {
   font-family: Geizer;
   src: url(../../Fonte/Geizer.otf); }
+@font-face {
+  font-family: Dejavu;
+  src: url(../../Fonte/DejaVuSans.ttf); }
 * {
   margin: 0;
   padding: 0; }
@@ -36,8 +39,8 @@ body {
   max-width: 100%;
   min-width: 300px;
   color: #fff;
-  font-size: 25px;
-  font-family: Geizer; }
+  font-size: 20px;
+  font-family: Dejavu; }
 
 a {
   text-decoration: none;
@@ -48,7 +51,8 @@ Header*/
 .header {
   background: #ff5900;
   height: 70px;
-  color: #000; }
+  color: #000;
+  font-family: Geizer; }
 
 .titulo {
   margin-left: 15px;
@@ -77,6 +81,9 @@ nav ul li:hover .cobertura {
   cursor: pointer;
   height: 100%; }
 
+.frase {
+  font-family: Geizer; }
+
 /*********
 Main*/
 main {
@@ -95,9 +102,11 @@ main {
       margin-bottom: 15px;
       width: 470px;
       height: 90px;
-      font-size: 20px;
+      font-size: 15px;
       cursor: pointer;
       transition: transform 0.3s ease; }
+      main #principal button i {
+        font-size: 35px; }
     main #principal button:hover {
       transform: translateX(390px); }
   main #tabua {
@@ -143,13 +152,71 @@ Cardapios*/
 
 /*********
 Pedidos*/
-.carnesInput {
-  width: 800px;
-  height: 200px;
-  background-color: #fff;
-  color: #000;
+.inputCliente {
+  width: 450px;
+  height: 500px;
+  background-color: #282828;
+  color: #fff;
   padding: 20px;
   border-radius: 10px; }
+
+.input {
+  width: 400px;
+  height: 200px;
+  background-color: #282828;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 10px 15px 10px; }
+
+.select {
+  width: 100%;
+  border: 2px solid #000;
+  padding: 5px;
+  background-color: #4b4b4b;
+  color: #fff; }
+
+.pedidoLista {
+  width: 450px;
+  height: auto;
+  color: #fff;
+  padding: 15px;
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  margin-bottom: 15px; }
+
+.pedidoButton {
+  width: 500px;
+  height: 150px;
+  color: #fff;
+  padding: 15px;
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  margin-top: 15px;
+  text-align: center; }
+
+.btn-pedido {
+  width: 100%;
+  font-size: 25px; }
+
+input[type="text"] {
+  width: 100%;
+  background-color: #5a5a5a;
+  color: #fff; }
+
+#escolhidos p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+#escolhidos button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0; }
+
+.btnX i {
+  color: red; }
 
 /************
 Contato*/
@@ -169,7 +236,8 @@ footer {
   width: 100%;
   height: 300px;
   background-color: #ff5900;
-  color: #000; }
+  color: #000;
+  font-family: Geizer; }
   footer .button {
     width: 60px;
     height: 60px;
