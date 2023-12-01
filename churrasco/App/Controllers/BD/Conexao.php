@@ -16,7 +16,7 @@ namespace App\Controllers\BD;
                     "$this->pass"
                 );
                 return $conexao;
-            } catch (PDOException $e){
+            } catch (\PDOException $e){
                 echo '<p>' . $e->getMessage() . '</p>';
             }
         }
